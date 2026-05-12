@@ -525,6 +525,78 @@ body {
     flex-wrap: wrap;
 }
 
+/* ========== 项目详情页样式 ========== */
+.project-detail-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--yellow-light);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+}
+
+.project-detail-summary {
+    max-width: 760px;
+}
+
+.project-detail-label {
+    display: inline-block;
+    margin-bottom: var(--spacing-xs);
+    padding: 4px 10px;
+    border-radius: 999px;
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.project-detail-summary p {
+    color: var(--text-gray);
+    line-height: 1.8;
+}
+
+.case-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.case-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+    gap: var(--spacing-md);
+    align-items: center;
+    background-color: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.case-image-wrap {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--bg-gray);
+}
+
+.case-image {
+    width: 100%;
+    display: block;
+}
+
+.case-copy h2 {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-accent-h2);
+}
+
+.case-copy p {
+    color: var(--text-gray);
+    line-height: 1.8;
+}
+
 /* ========== 论文页样式 ========== */
 .paper-filters {
     display: flex;
@@ -773,6 +845,14 @@ body {
     
     /* 项目网格 */
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-detail-intro {
+        flex-direction: column;
+    }
+
+    .case-item {
         grid-template-columns: 1fr;
     }
     
